@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const links = ["home", "contact", "about", "sign up"];
+const links = ["contact", "about", "sign up"];
 
 export default function Navbar() {
   return (
@@ -33,6 +33,13 @@ export default function Navbar() {
               tabIndex={0}
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
+                <li>
+                  <Link
+                    to="/"
+                  >
+                    Home
+                  </Link>
+                </li>
               {links.map((link, key) => (
                 <li key={key}>
                   <Link
